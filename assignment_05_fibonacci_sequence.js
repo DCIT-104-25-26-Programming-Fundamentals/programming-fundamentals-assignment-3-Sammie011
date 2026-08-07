@@ -55,7 +55,6 @@
 // =============================================================================
 const readline = require("readline-sync");
 
-// Part A - Print the first N Fibonacci numbers
 function printFibonacci() {
     let n = parseInt(readline.question("How many terms? "));
 
@@ -78,7 +77,6 @@ function printFibonacci() {
     console.log("Fibonacci sequence:", sequence.join(" "));
 }
 
-// Part B - Check if a number is in the Fibonacci sequence
 function checkFibonacci() {
     let num = parseInt(readline.question("Enter a number to check: "));
 
@@ -109,7 +107,7 @@ function checkFibonacci() {
     }
 }
 
-// Run both parts
+
 printFibonacci();
 checkFibonacci();
 
