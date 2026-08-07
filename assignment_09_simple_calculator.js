@@ -73,5 +73,84 @@
 // =============================================================================
 // YOUR CODE BELOW — remove the // symbols from the scaffold and fill it in
 // =============================================================================
+const readline = require("readline-sync");
 
+function add(a, b) {
+    return a + b;
+}
+
+function subtract(a, b) {
+    return a - b;
+}
+
+function multiply(a, b) {
+    return a * b;
+}
+
+function divide(a, b) {
+    if (b === 0) {
+        return "Error: Cannot divide by zero.";
+    }
+    return (a / b).toFixed(2);
+}
+
+function modulus(a, b) {
+    if (b === 0) {
+        return "Error: Cannot divide by zero.";
+    }
+    return a % b;
+}
+
+function exponent(a, b) {
+    return a ** b;
+}
+
+let choice;
+
+do {
+    console.log("\n==========================");
+    console.log("     SIMPLE CALCULATOR");
+    console.log("==========================");
+    console.log("1. Addition");
+    console.log("2. Subtraction");
+    console.log("3. Multiplication");
+    console.log("4. Division");
+    console.log("5. Modulus");
+    console.log("6. Exponentiation");
+    console.log("7. Quit");
+
+    choice = readline.questionInt("Select an operation (1-7): ");
+
+    if (choice >= 1 && choice <= 6) {
+        const num1 = readline.questionFloat("Enter first number: ");
+        const num2 = readline.questionFloat("Enter second number: ");
+
+        switch (choice) {
+            case 1:
+                console.log(`Result: ${add(num1, num2).toFixed(2)}`);
+                break;
+            case 2:
+                console.log(`Result: ${subtract(num1, num2).toFixed(2)}`);
+                break;
+            case 3:
+                console.log(`Result: ${multiply(num1, num2).toFixed(2)}`);
+                break;
+            case 4:
+                console.log(`Result: ${divide(num1, num2)}`);
+                break;
+            case 5:
+                const mod = modulus(num1, num2);
+                console.log(typeof mod === "string" ? mod : `Result: ${mod}`);
+                break;
+            case 6:
+                console.log(`Result: ${exponent(num1, num2).toFixed(2)}`);
+                break;
+        }
+    } else if (choice === 7) {
+        console.log("Goodbye!");
+    } else {
+        console.log("Invalid choice. Please select a number from 1 to 7.");
+    }
+
+} while (choice !== 7);
 
