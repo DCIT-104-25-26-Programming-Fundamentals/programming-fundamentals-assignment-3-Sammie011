@@ -44,7 +44,6 @@
 // =============================================================================
 const readline = require("readline-sync");
 
-// Function to calculate sum
 function getSum(arr) {
     let sum = 0;
     for (let i = 0; i < arr.length; i++) {
@@ -53,12 +52,10 @@ function getSum(arr) {
     return sum;
 }
 
-// Function to calculate average
 function getAverage(arr) {
     return getSum(arr) / arr.length;
 }
 
-// Function to calculate maximum
 function getMaximum(arr) {
     let max = arr[0];
     for (let i = 1; i < arr.length; i++) {
@@ -69,7 +66,6 @@ function getMaximum(arr) {
     return max;
 }
 
-// Function to calculate minimum
 function getMinimum(arr) {
     let min = arr[0];
     for (let i = 1; i < arr.length; i++) {
@@ -80,7 +76,6 @@ function getMinimum(arr) {
     return min;
 }
 
-// Main Program
 let n = Number(readline.question("How many numbers? "));
 
 if (n <= 0) {
