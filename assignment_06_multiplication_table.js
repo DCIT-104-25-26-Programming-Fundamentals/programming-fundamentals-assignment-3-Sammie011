@@ -60,7 +60,6 @@
 // =============================================================================
 const readline = require("readline-sync");
 
-// Function for Part A
 function singleTable() {
     let number = parseInt(readline.question("Enter a number: "));
 
@@ -75,7 +74,6 @@ function singleTable() {
     }
 }
 
-// Function for Part B
 function tablesOneToN() {
     let n = parseInt(readline.question("\nEnter a number N: "));
 
@@ -93,7 +91,6 @@ function tablesOneToN() {
     }
 }
 
-// Run both parts
 singleTable();
 tablesOneToN();
 
