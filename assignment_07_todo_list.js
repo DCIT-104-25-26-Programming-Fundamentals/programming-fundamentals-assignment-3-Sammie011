@@ -84,14 +84,12 @@ const readline = require("readline-sync");
 
 let tasks = [];
 
-// Add a task
 function addTask() {
     let task = readline.question("Enter task: ");
     tasks.push(task);
     console.log(`Task added: "${task}"`);
 }
 
-// View all tasks
 function viewTasks() {
     if (tasks.length === 0) {
         console.log("Your to-do list is empty.");
@@ -102,9 +100,7 @@ function viewTasks() {
     for (let i = 0; i < tasks.length; i++) {
         console.log(`${i + 1}. ${tasks[i]}`);
     }
-}
-
-// Delete a task
+    
 function deleteTask() {
     if (tasks.length === 0) {
         console.log("There are no tasks to delete.");
@@ -125,7 +121,6 @@ function deleteTask() {
     }
 }
 
-// Main menu
 let running = true;
 
 while (running) {
