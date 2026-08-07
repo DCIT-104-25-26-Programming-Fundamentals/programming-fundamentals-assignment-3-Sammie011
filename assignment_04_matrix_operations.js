@@ -69,7 +69,6 @@
 // =============================================================================
 const readlineSync = require("readline-sync");
 
-// Read a matrix
 function readMatrix(rows, cols) {
     let matrix = [];
 
@@ -83,14 +82,12 @@ function readMatrix(rows, cols) {
     return matrix;
 }
 
-// Display matrix
 function displayMatrix(matrix) {
     for (let row of matrix) {
         console.log(row.join(" "));
     }
 }
 
-// Part A - Transpose
 function transposeMatrix(matrix) {
     let transpose = [];
 
@@ -104,7 +101,6 @@ function transposeMatrix(matrix) {
     return transpose;
 }
 
-// Part B - Add matrices
 function addMatrices(A, B) {
     let result = [];
 
@@ -118,7 +114,6 @@ function addMatrices(A, B) {
     return result;
 }
 
-// Part C - Multiply matrices
 function multiplyMatrices(A, B) {
     let result = [];
 
@@ -135,7 +130,6 @@ function multiplyMatrices(A, B) {
     return result;
 }
 
-// ------------------- PART A -------------------
 console.log("PART A - Transpose Matrix");
 
 let rows = Number(readlineSync.question("Enter number of rows: "));
@@ -149,7 +143,6 @@ displayMatrix(matrix);
 console.log("\nTransposed Matrix:");
 displayMatrix(transposeMatrix(matrix));
 
-// ------------------- PART B -------------------
 console.log("\nPART B - Add Two Matrices");
 
 rows = Number(readlineSync.question("Enter number of rows: "));
@@ -164,7 +157,6 @@ let B = readMatrix(rows, cols);
 console.log("\nResult:");
 displayMatrix(addMatrices(A, B));
 
-// ------------------- PART C -------------------
 console.log("\nPART C - Multiply Two Matrices");
 
 let m = Number(readlineSync.question("Rows of Matrix A: "));
