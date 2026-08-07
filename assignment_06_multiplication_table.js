@@ -58,5 +58,42 @@
 // =============================================================================
 // YOUR CODE BELOW — remove the // symbols from the scaffold and fill it in
 // =============================================================================
+const readline = require("readline-sync");
 
+// Function for Part A
+function singleTable() {
+    let number = parseInt(readline.question("Enter a number: "));
+
+    if (isNaN(number) || number <= 0) {
+        console.log("Error: Please enter a positive integer.");
+        return;
+    }
+
+    console.log(`\nMultiplication Table for ${number}`);
+    for (let i = 1; i <= 12; i++) {
+        console.log(`${number} x ${i} = ${number * i}`);
+    }
+}
+
+// Function for Part B
+function tablesOneToN() {
+    let n = parseInt(readline.question("\nEnter a number N: "));
+
+    if (isNaN(n) || n <= 0) {
+        console.log("Error: Please enter a positive integer.");
+        return;
+    }
+
+    for (let table = 1; table <= n; table++) {
+        console.log(`\nMultiplication Table for ${table}`);
+
+        for (let i = 1; i <= 12; i++) {
+            console.log(`${table} x ${i} = ${table * i}`);
+        }
+    }
+}
+
+// Run both parts
+singleTable();
+tablesOneToN();
 
