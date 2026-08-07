@@ -43,7 +43,6 @@
 // =============================================================================
 const readlineSync = require("readline-sync");
 
-// Function to check if a number is prime
 function isPrime(number) {
     if (number < 2) {
         return false;
@@ -58,7 +57,6 @@ function isPrime(number) {
     return true;
 }
 
-// Main function
 function main() {
     const number = readlineSync.questionInt("Enter a number: ");
 
