@@ -87,7 +87,6 @@ const readline = require("readline-sync");
 
 let students = [];
 
-// Add Student
 function addStudent() {
     let name = readline.question("Student name: ");
     let id = Number(readline.question("Student ID: "));
@@ -110,7 +109,6 @@ function addStudent() {
     console.log(`Student "${name}" added successfully.\n`);
 }
 
-// Display All Students
 function displayStudents() {
     if (students.length === 0) {
         console.log("No students have been added yet.\n");
@@ -137,7 +135,6 @@ function displayStudents() {
     });
 }
 
-// Calculate Average Score
 function calculateAverage() {
     let id = Number(readline.question("Enter student ID: "));
 
@@ -159,7 +156,6 @@ function calculateAverage() {
     console.log(`${student.name}'s average score is ${average.toFixed(2)}\n`);
 }
 
-// Main Menu
 function menu() {
     while (true) {
         console.log("\n==============================");
