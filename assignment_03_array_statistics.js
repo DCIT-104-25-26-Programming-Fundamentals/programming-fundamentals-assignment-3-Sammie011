@@ -42,5 +42,61 @@
 // =============================================================================
 // YOUR CODE BELOW — remove the // symbols from the scaffold and fill it in
 // =============================================================================
+const readline = require("readline-sync");
 
+// Function to calculate sum
+function getSum(arr) {
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
+        sum += arr[i];
+    }
+    return sum;
+}
+
+// Function to calculate average
+function getAverage(arr) {
+    return getSum(arr) / arr.length;
+}
+
+// Function to calculate maximum
+function getMaximum(arr) {
+    let max = arr[0];
+    for (let i = 1; i < arr.length; i++) {
+        if (arr[i] > max) {
+            max = arr[i];
+        }
+    }
+    return max;
+}
+
+// Function to calculate minimum
+function getMinimum(arr) {
+    let min = arr[0];
+    for (let i = 1; i < arr.length; i++) {
+        if (arr[i] < min) {
+            min = arr[i];
+        }
+    }
+    return min;
+}
+
+// Main Program
+let n = Number(readline.question("How many numbers? "));
+
+if (n <= 0) {
+    console.log("Error: Number of values must be positive.");
+} else {
+    let numbers = [];
+
+    for (let i = 0; i < n; i++) {
+        let value = Number(readline.question(`Enter number ${i + 1}: `));
+        numbers.push(value);
+    }
+
+    console.log("\nResults:");
+    console.log("Sum:", getSum(numbers));
+    console.log("Average:", getAverage(numbers));
+    console.log("Maximum:", getMaximum(numbers));
+    console.log("Minimum:", getMinimum(numbers));
+}
 
